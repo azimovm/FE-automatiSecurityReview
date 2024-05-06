@@ -21,16 +21,17 @@ import {
   MatCellDef,
   MatHeaderCell,
   MatHeaderCellDef,
-  MatTable,
+  MatTable, MatTableModule,
 } from '@angular/material/table';
 import { MatTab, MatTabGroup } from '@angular/material/tabs';
 import { HeaderComponent } from './widget/header/header.component';
 import { MatToolbar, MatToolbarModule } from '@angular/material/toolbar';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
-import { RepotTableComponent } from './widget/repot-table/repot-table.component';
+import { ReportTableComponent } from './widget/report-table/report-table.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, HeaderComponent, RepotTableComponent],
+  declarations: [AppComponent, DashboardComponent, HeaderComponent, ReportTableComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -54,6 +55,8 @@ import { RepotTableComponent } from './widget/repot-table/repot-table.component'
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    MatTableModule,
+    HttpClientModule,
   ],
   providers: [provideClientHydration(), provideAnimationsAsync('noop')],
   bootstrap: [AppComponent],
