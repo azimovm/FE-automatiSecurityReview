@@ -1,0 +1,42 @@
+<mat-tab-group>
+  <mat-tab label="Dashboard">
+    <div class="row">
+      <div class="col-6 p-5">
+        <h3>Security review of Microservice</h3>
+        <div class="column-gap-1">
+          <form [formGroup]="miseForm" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+              <mat-label>Select Mise</mat-label>
+              <mat-select formControlName="selectedOption">
+                <mat-option *ngFor="let option of mises" [value]="option.value">
+                  {{ option.label }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <div>
+              <button
+                mat-flat-button
+                color="primary"
+                [disabled]="!miseForm.valid"
+              >
+                Basic
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div>
+        <div class="pt-5">
+          <h5 class="">Overview</h5>
+          <p>
+            <b>Security Review Check</b> needs to be done for the microservice
+            before release to production.
+          </p>
+        </div>
+      </div>
+    </div></mat-tab
+  >
+  <mat-tab label="Report"> <div class="p-5">
+<app-repot-table></app-repot-table>
+  </div> </mat-tab>
+</mat-tab-group>

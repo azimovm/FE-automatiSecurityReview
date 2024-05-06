@@ -1,0 +1,114 @@
+{
+  "name": "ms-oce-soe-b2b-cart",
+  "endpoints": [
+    {
+      "controllerName": "CartController.java",
+      "functionName": "getLineItemsCount",
+      "method": "Get",
+      "path": "/lineItems",
+      "annotation": "Operation, B2BPermissionCheck, SecurityClassification, GetMapping, OceRequestHeaders, ApiResponses, B2BPermissionCheck",
+      "dataClassification": "C3",
+      "useCase": "Order"
+    },
+    {
+      "controllerName": "CartController.java",
+      "functionName": "getCart",
+      "method": "Get",
+      "path": "/items",
+      "annotation": "Operation, SecurityClassification, B2BPermissionCheck, B2BPermissionCheck, GetMapping, OceRequestHeaders, B2BPermissionCheck, B2BPermissionCheck",
+      "dataClassification": "C3",
+      "useCase": "Order, Mobile/Subscription/Promotion"
+    },
+    {
+      "controllerName": "CartController.java",
+      "functionName": "getCartWithPromotion",
+      "method": "Get",
+      "path": "/itemsWithPromotion",
+      "annotation": "Operation, SecurityClassification, B2BPermissionCheck, B2BPermissionCheck, GetMapping, OceRequestHeaders, B2BPermissionCheck, B2BPermissionCheck",
+      "dataClassification": "C3",
+      "useCase": "Order, Mobile/Subscription/Promotion"
+    },
+    {
+      "controllerName": "CartController.java",
+      "functionName": "checkShippingInfo",
+      "method": "Get",
+      "path": "/checkShippingInfo",
+      "annotation": "Operation, SecurityClassification, B2BPermissionCheck, GetMapping, B2BPermissionCheck, OceRequestHeaders, ResponseStatus, B2BPermissionCheck, B2BPermissionCheck",
+      "dataClassification": "C3",
+      "useCase": "Order, Mobile/Subscription/Promotion"
+    },
+    {
+      "controllerName": "CartController.java",
+      "functionName": "getCartLite",
+      "method": "Get",
+      "path": "/lite/items",
+      "annotation": "Operation, SecurityClassification, B2BPermissionCheck, GetMapping, OceRequestHeaders, B2BPermissionCheck",
+      "dataClassification": "C3",
+      "useCase": "Inventory"
+    },
+    {
+      "controllerName": "CartController.java",
+      "functionName": "addItemsToCart",
+      "method": "Post",
+      "path": "/items",
+      "annotation": "Operation, SecurityClassification, B2BPermissionCheck, B2BPermissionCheck, OceRequestHeaders, PostMapping, B2BPermissionCheck, B2BPermissionCheck",
+      "dataClassification": "C3",
+      "useCase": "Order, Mobile/Subscription/Promotion"
+    },
+    {
+      "controllerName": "CartController.java",
+      "functionName": "addItemsToCartAndCheckAvailability",
+      "method": "Post",
+      "path": "/availability/items",
+      "annotation": "Operation, SecurityClassification, B2BPermissionCheck, OceRequestHeaders, PostMapping, B2BPermissionCheck",
+      "dataClassification": "C3",
+      "useCase": "Order"
+    },
+    {
+      "controllerName": "CartController.java",
+      "functionName": "updateCart",
+      "method": "Put",
+      "path": "/items",
+      "annotation": "Operation, SecurityClassification, B2BPermissionCheck, B2BPermissionCheck, OceRequestHeaders, PutMapping, B2BPermissionCheck, B2BPermissionCheck",
+      "dataClassification": "C3",
+      "useCase": "Order, Mobile/Subscription/Promotion"
+    },
+    {
+      "controllerName": "CartController.java",
+      "functionName": "removeCart",
+      "method": "Delete",
+      "path": "/items->/lineItems",
+      "annotation": "Operation, SecurityClassification, B2BPermissionCheck, B2BPermissionCheck, OceRequestHeaders, DeleteMapping, B2BPermissionCheck, B2BPermissionCheck",
+      "dataClassification": "C3",
+      "useCase": "Order, Mobile/Subscription/Promotion"
+    },
+    {
+      "controllerName": "CartController.java",
+      "functionName": "bundleAddToCart",
+      "method": "Post",
+      "path": "/bundleItem",
+      "annotation": "Operation, SecurityClassification, B2BPermissionCheck, PostMapping, B2BPermissionCheck",
+      "dataClassification": "C3",
+      "useCase": "Order"
+    },
+    {
+      "controllerName": "CartController.java",
+      "functionName": "postAgentDetailsInCartAttributes",
+      "method": "Post",
+      "path": "/agentDetails/cartAttributes",
+      "annotation": "Operation, SecurityClassification, B2BPermissionCheck, PostMapping, B2BPermissionCheck",
+      "dataClassification": "C3",
+      "useCase": "Order"
+    },
+    {
+      "controllerName": "CartController.java",
+      "functionName": "sanitize",
+      "method": "",
+      "path": "",
+      "annotation": "",
+      "dataClassification": "",
+      "useCase": ""
+    }
+  ],
+  "version": "10.85.1"
+}
