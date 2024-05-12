@@ -11,6 +11,7 @@ export class ReportDataMock {
         annotation: 'SecurityClassification',
         dataClassification: 'C3',
         useCase: 'Mobile/Subscription/Promotion',
+        status: 'deleted'
       },
       {
         controllerName: 'UserController.java',
@@ -29,6 +30,7 @@ export class ReportDataMock {
         annotation: 'SecurityClassification',
         dataClassification: 'C1',
         useCase: 'E-commerce/Shopping',
+        status: 'inserted'
       },
       {
         controllerName: 'OrderController.java',

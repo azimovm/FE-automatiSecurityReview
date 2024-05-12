@@ -1,32 +1,50 @@
-<mat-tab-group>
+<mat-tab-group #matTabGroup>
   <mat-tab label="Dashboard">
-    <div class="row">
-      <div class="col-6 p-5">
-        <h3>Security review of Microservice</h3>
-        <div class="column-gap-1">
-          <form [formGroup]="miseForm" (ngSubmit)="onSubmit()">
-            <mat-form-field>
-              <mat-label>Select Mise</mat-label>
-              <mat-select formControlName="selectedOption">
-                <mat-option *ngFor="let option of mises" [value]="option.value">
-                  {{ option.label }}
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
+    <div class="row m-2 mt-5">
+      <div class="col-6">
+        <h3 class="pb-2">Set up review configuration</h3>
+        <div>
+          <form [formGroup]="miseForm" (ngSubmit)="onSubmit(matTabGroup)">
+            <div>
+              <mat-form-field>
+                <mat-label>Select Mise</mat-label>
+                <mat-select formControlName="mise">
+                  <mat-option
+                    *ngFor="let mise of microServices"
+                    [value]="mise.value"
+                  >
+                    {{ mise.label }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field>
+                <mat-label>Select Tag</mat-label>
+                <mat-select formControlName="version">
+                  <mat-option
+                    *ngFor="let version of version"
+                    [value]="version.value"
+                  >
+                    {{ version.value }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
             <div>
               <button
                 mat-flat-button
                 color="primary"
                 [disabled]="!miseForm.valid"
               >
-                Basic
+                Review
               </button>
             </div>
           </form>
         </div>
       </div>
       <div>
-        <div class="pt-5">
+        <div class="pt-sm-2 col-8">
           <h5 class="">Overview</h5>
           <p>
             <b>Security Review Check</b> needs to be done for the microservice
@@ -34,9 +52,9 @@
           </p>
         </div>
       </div>
-    </div></mat-tab
-  >
-  <mat-tab label="Report">
-      <app-report-table></app-report-table>
+    </div>
+  </mat-tab>
+  <mat-tab label="Report" [disabled]="isReportAvailable">
+    <app-report-table></app-report-table>
   </mat-tab>
 </mat-tab-group>

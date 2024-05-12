@@ -28,7 +28,7 @@ import { HeaderComponent } from './widget/header/header.component';
 import { MatToolbar, MatToolbarModule } from '@angular/material/toolbar';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { ReportTableComponent } from './widget/report-table/report-table.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [AppComponent, DashboardComponent, HeaderComponent, ReportTableComponent],

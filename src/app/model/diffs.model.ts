@@ -6,4 +6,5 @@ export interface DiffsModel{
   annotation: string;
   dataClassification: string;
   useCase: string;
+  status?: string;
 }
