@@ -8,8 +8,8 @@ export class ReportDataMock {
         functionName: 'getCart',
         method: 'GET',
         path: '/items',
-        annotation: 'SecurityClassification',
-        dataClassification: 'C3',
+        annotation: '',
+        dataClassification: '',
         useCase: 'Mobile/Subscription/Promotion',
         status: 'deleted'
       },
