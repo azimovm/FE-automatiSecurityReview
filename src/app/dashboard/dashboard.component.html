@@ -58,3 +58,7 @@
     <app-report-table></app-report-table>
   </mat-tab>
 </mat-tab-group>
+<div *ngIf="isAlertOpen" class="fixed-top alert alert-success" role="alert">
+  The report successfully created, to see the result, please click on
+  <b>"Show Report"</b>
+</div>

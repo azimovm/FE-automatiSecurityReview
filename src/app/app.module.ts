@@ -31,7 +31,7 @@ import { ReportTableComponent } from './widget/report-table/report-table.compone
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, HeaderComponent, ReportTableComponent],
+  declarations: [AppComponent, DashboardComponent, HeaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -57,6 +57,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     MatIconModule,
     MatTableModule,
     HttpClientModule,
+    ReportTableComponent,
   ],
   providers: [provideClientHydration(), provideAnimationsAsync('noop')],
   bootstrap: [AppComponent],
